@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { PlantDashboardComponent } from '../plant-dashboard/plant-dashboard';
+import { PlantDashboardComponent } from '../pages/plant-dashboard/plant-dashboard';
 
 export const routes: Routes = [
   {
