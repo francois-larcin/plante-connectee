@@ -1,10 +1,15 @@
-<button pButton>
-  <i class="pi pi-check" pButtonIcon></i>
-  <span pButtonLabel>Save</span>
-</button>
+<div class="dashboard-container">
+  <h1>Tableau de bord des plantes</h1>
 
-<!-- <p-button icon="pi pi-home" aria-label="Save" />
-<p-button label="Profile" icon="pi pi-user" />
-<p-button label="Save" icon="pi pi-check" iconPos="right" />
-<p-button label="Search" icon="pi pi-search" iconPos="top" />
-<p-button label="Update" icon="pi pi-refresh" iconPos="bottom" /> -->
+  <app-plant-list
+    [plants]="plants"
+    (plantSelected)="onPlantSelected($event)"
+  ></app-plant-list>
+
+  @if (selectedPlantId) {
+  <div class="plant-detail">
+    <p>Plante sélectionnée : {{ selectedPlantId }}</p>
+    <!-- TODO: Ajouter le composant de détail ici -->
+  </div>
+  }
+</div>

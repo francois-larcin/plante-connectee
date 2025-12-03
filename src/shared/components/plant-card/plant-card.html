@@ -1,0 +1,16 @@
+<p-card>
+  <img [src]="plant.imageUrl" alt="{{ plant.name }}" />
+  <h3>{{ plant.name }}</h3>
+  <p>{{ plant.species }}</p>
+  <div>
+    <small
+      >💧 {{ plant.lastMeasurement.soilMoisture.value
+      }}{{ plant.lastMeasurement.soilMoisture.unit }}</small
+    >
+    <small
+      >🌡 {{ plant.lastMeasurement.temperature.value
+      }}{{ plant.lastMeasurement.temperature.unit }}</small
+    >
+  </div>
+  <p-button icon="pi pi-view" (click)="onClick()"></p-button>
+</p-card>
