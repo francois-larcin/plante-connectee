@@ -21,7 +21,7 @@ export class PlantService {
           id,
           name: this.formatPlantName(id),
           species: 'Unknown',
-          imageUrl: `assets/plants-image/${id.split('-')[0]}.webp`,
+          imageUrl: `/plants-image/${id.split('-')[0]}.webp`,
         }));
       })
     );
@@ -38,7 +38,7 @@ export class PlantService {
             id,
             name: this.formatPlantName(id),
             species: 'Unknown',
-            imageUrl: `assets/plants-image/${id.split('-')[0]}.webp`,
+            imageUrl: `/plants-image/${id.split('-')[0]}.webp`,
             lastMeasurement: measurement,
           };
         })
